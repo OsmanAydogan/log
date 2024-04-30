@@ -71,7 +71,6 @@
 
         p {
             font-family: 'Times New Roman', Times, serif;
-            font-weight: bold;
         }
 
         .login-box .user-box input {
@@ -286,7 +285,7 @@
           background-color: #ffffff;
           border: 2px solid #dedede;
           padding: 20px;
-          width: 400px;
+          width: 350px;
 
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
