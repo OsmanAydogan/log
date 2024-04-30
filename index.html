@@ -6,300 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sözleşme</title>
-    <!-- important assets
-    linear-gradient(#141e30, #2a6c56)
-     box-shadow: 0 0 5px #03f484, 0 0 25px #03f484, 0 0 50px #03f484, 0 0 100px #03f484;
     
-    -->
-
-    
-
-    <style>
-        html {
-            height: 100%;
-        }
-        
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(135deg, #6f00ff, #00b8ff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, #fff 20%, transparent 80%);
-    animation: animate 10s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    100% {
-        transform: translate(100vw, 100vh) rotate(360deg);
-    }
-}
-
-
-        @media only screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .login-box,
-  .contract-box {
-    width: 90%;
-    margin: 10px auto;
-  }
-}
-
-        
-        .login-box {
-            width: 400px;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.5);
-            box-sizing: border-box;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-        }
-        
-        .login-box h2 {
-            margin: 0 0 30px;
-            padding: 0;
-            color: #fff;
-            text-align: center;
-        }
-        
-        .login-box .user-box {
-            position: relative;
-        }
-        
-        .login-box .user-box input {
-            width: 100%;
-            padding: 10px 0;
-            font-size: 16px;
-            color: #fff;
-            margin-bottom: 30px;
-            outline: none;
-            background: transparent;
-        }
-        
-        .login-box .user-box label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 10px 0;
-            font-size: 16px;
-            color: #fff;
-            pointer-events: none;
-            transition: 0.5s;
-        }
-        
-        .login-box .user-box input:focus~label,
-        .login-box .user-box input:valid~label {
-            top: -20px;
-            left: 0;
-            color: #03f484;
-            font-size: 12px;
-        }
-        
-        .login-box form a {
-            position: relative;
-            display: inline-block;
-            padding: 10px 20px;
-            color: #03f484;
-            font-size: 16px;
-            text-decoration: none;
-            text-transform: uppercase;
-            overflow: hidden;
-            transition: 0.5s;
-            margin-top: 40px;
-            letter-spacing: 4px;
-        }
-        
-        .login-box a:hover {
-            background: #03f484;
-            color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 5px #03f484, 0 0 25px #03f484, 0 0 50px #03f484, 0 0 100px #03f484;
-        }
-        
-        .login-box a span {
-            position: absolute;
-            display: block;
-        }
-        
-        .login-box a span:nth-child(1) {
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #03f484);
-            animation: btn-anim1 1s linear infinite;
-        }
-        
-        @keyframes btn-anim1 {
-            0% {
-                left: -100%;
-            }
-            50%,
-            100% {
-                left: 100%;
-            }
-        }
-        
-        .login-box a span:nth-child(2) {
-            top: -100%;
-            right: 0;
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(180deg, transparent, #03f484);
-            animation: btn-anim2 1s linear infinite;
-            animation-delay: 0.25s;
-        }
-        
-        @keyframes btn-anim2 {
-            0% {
-                top: -100%;
-            }
-            50%,
-            100% {
-                top: 100%;
-            }
-        }
-        
-        .login-box a span:nth-child(3) {
-            bottom: 0;
-            right: 100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(270deg, transparent, #03f484);
-            animation: btn-anim3 1s linear infinite;
-            animation-delay: 0.5s;
-        }
-        
-        @keyframes btn-anim3 {
-            0% {
-                right: -100%;
-            }
-            50%,
-            100% {
-                right: 100%;
-            }
-        }
-        
-        .login-box a span:nth-child(4) {
-            bottom: -100%;
-            left: 0;
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(360deg, transparent, #03f484);
-            animation: btn-anim4 1s linear infinite;
-            animation-delay: 0.75s;
-        }
-        
-        @keyframes btn-anim4 {
-            0% {
-                bottom: -100%;
-            }
-            50%,
-            100% {
-                bottom: 100%;
-            }
-        }
-        
-      
-        .contract-box {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            width: 300px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid #03f484;
-            border-radius: 10px;
-            color: #fff;
-            text-align: center;
-        }
-
-        .kabul-et {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #2fff00;
-  color: #1800ec;
-  text-decoration: none;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.kabul-et::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 0, 0, 0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  animation: pulse 2s linear infinite;
-  z-index: 0;
-}
-
-@keyframes pulse {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    width: 300%;
-    height: 300%;
-    opacity: 0;
-  }
-}
-
-    </style>
 </head>
+<link rel="stylesheet" href="ciess.css">
 
 <body>
+
     <div class="login-box">
         <h2>Sözleşme Formu</h2>
-        <form action="">
-            <div class="user-box">  
-                <input type="text" required>
+
+        <form name="myForm" action="kabul.html" method="get" onsubmit="return validateForm()">
+
+
+
+            <div class="user-box">
+                <input type="text" name="isim" id="ism" required pattern="[A-Za-z\s]+" title="Lütfen ismini yaz :/" placeholder="ipucu(Cansel)" required>
                 <label for="">İsim-Soyisim</label>
             </div>
             <div class="user-box">
-                <input type="password" required>
-                <label for="">yaş (ipucu:18)</label>
+                <input type="text" name="yas" required pattern="[0-9]+" placeholder="(ipucu: 18)" required>
+                <label for="">Yaşınızı giriniz</label>
             </div>
-            
-            <a href="#">
-               
-                <a href="kabul.html" class="kabul-et" style="color: white;">Kabul Ediyorum</a>
+
+            <button type="submit" class="kabul-et" id="buton">Kabul Ediyorum</button>
+            <br><br>
+            <a href="form.html" style="color: beige; text-decoration: underline; " >Sözleşme şartları için tıklayın-></a>
 
         </form>
-        <a href="form.html" style="color:beige">Sözleşme şartları için tıklayın-></a></a>
-
     </div>
-    <!-- Yeni div -->
-   
+
+    <script type="text/javascript">
+        function validateForm() {
+            var isim = document.forms["myForm"]["isim"].value;
+            var yas = document.forms["myForm"]["yas"].value;
+            if (isim == "" || yas == "") {
+                alert("Lütfen tüm alanları doldurun.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 
 </body>
 

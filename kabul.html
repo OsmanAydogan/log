@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Teşekkürler</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Teşekkürlerr</h1>
+    <h1 id="tebrik" style="text-align: center;">Teşekkürlerr </h1>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const ad = urlParams.get('isim');
+            const tebrik = document.getElementById('tebrik');
+
+            if(ad.substring(0, 6).toLowerCase() !== "cansel"){
+                
+                tebrik.innerHTML = "Adını gir demiştim :/"+ad;
+            }
+
+            else {
+            
+            tebrik.innerHTML = "Teşekkürlerr " +ad+"!";
+        }
+        }
+    </script>
 </body>
 </html>
