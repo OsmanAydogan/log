@@ -44,8 +44,8 @@
 
             .login-box,
             .contract-box {
-                width: 20%;
-                margin: 10px auto;
+                width: 10%;
+                margin: 70px auto;
             }
         }
 
@@ -285,8 +285,8 @@
             transform: translate(-50%, -50%);
           background-color: #ffffff;
           border: 2px solid #dedede;
-          padding: 40px;
-          width: 500px;
+          padding: 20px;
+          width: 400px;
 
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
