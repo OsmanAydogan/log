@@ -38,13 +38,9 @@
         }
 
         @media only screen and (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .login-box,
             .contract-box {
-                width: 10%;
+                width: 80%; /* Ekran genişliğinin yüzde 80'ine ayarlandı */
+                max-width: 350px; /* Maksimum genişlik belirlendi */
                 margin: 70px auto;
             }
         }
@@ -216,15 +212,18 @@
         .contract-box {
             position: absolute;
             top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            width: 300px;
+            left: 50%;
+            transform: translate(-50%, -50%);
             padding: 20px;
             background: rgba(255, 255, 255, 0.2);
             border: 2px solid #03f484;
             border-radius: 10px;
             color: #fff;
             text-align: center;
+            max-height: 80vh; /* Maksimum yükseklik belirlendi */
+            overflow-y: auto; /* Dikey kaydırma eklendi */
+            max-width: 80vw; /* Maksimum genişlik belirlendi */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .kabul-et {
